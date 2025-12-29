@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- 动态打字机效果标题 -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=36BCF7&background=00000000&center=true&vCenter=true&width=435&lines=Hi+There!+%F0%9F%91%8B;Welcome+to+my+profile!;I+am+a+developer;Always+learning...)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=36BCF7&background=00000000&center=true&vCenter=true&width=435&lines=我是摆渡，一个hitszer;欢迎来到我的github;祝你旅途愉快;给个星星吧，谢谢啦~)](https://git.io/typing-svg)
 
 <!-- 贪吃蛇动画 (自动适配深色/浅色模式) -->
 <picture>
