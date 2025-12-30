@@ -14,7 +14,7 @@
 
 <!-- 终端风格打字机 -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=800&color=39FF14&background=0D111700&center=true&vCenter=true&width=500&lines=$+我是摆渡，一个hitszer+🚣;$+欢迎来到我的github+✨;$+祝你旅途愉快+🚀;$+给个星星吧，谢谢啦~+⭐&duration=1800" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=800&color=39FF14&background=0D111700&center=true&vCenter=true&width=500&lines=%24%20%E6%88%91%E6%98%AF%E6%91%86%E6%B8%A1%EF%BC%8C%E4%B8%80%E4%B8%AAhitszer%20%F0%9F%9A%A3%3B%24%20%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84github%20%E2%9C%A8%3B%24%20%E7%A5%9D%E4%BD%A0%E6%97%85%E9%80%94%E6%84%89%E5%BF%AB%20%F0%9F%9A%80%3B%24%20%E7%BB%99%E4%B8%AA%E6%98%9F%E6%98%9F%E5%90%A7%EF%BC%8C%E8%B0%A2%E8%B0%A2%E5%95%A6~%20%E2%AD%90&duration=1800" alt="Typing SVG" />
 </a>
 
 <br/>
