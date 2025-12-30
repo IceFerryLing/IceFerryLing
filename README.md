@@ -25,18 +25,18 @@ I am still a beginner in the vast world of computer science, humbly learning and
 
 <br/>
 
-- 🔭 正在投入 **后端开发**
-- 🌱 正在深入学习 **深度学习 / 网络编程**
-- 💻 常用技术栈 **Python / C++**
-- 🎵 业余爱好 **古风音乐**
+🔭 正在投入 **后端开发** <br/>
+🌱 正在深入学习 **深度学习 / 网络编程** <br/>
+💻 常用技术栈 **Python / C++** <br/>
+🎵 业余爱好 **古风音乐**
 
 </div>
 
 ---
 
-### 🛠️ Tech Stack
-
 <div align="center">
+
+### 🛠️ Tech Stack
 
   <!-- 编程语言 -->
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
@@ -73,9 +73,10 @@ I am still a beginner in the vast world of computer science, humbly learning and
 
 ---
 
+<div align="center">
+
 ### 📊 GitHub Stats
 
-<div align="center">
   <!-- 
     GitHub 统计卡片 
     theme=radical 是一个很酷的配色，你也可以改成: dark, dracula, gruvbox 等
@@ -86,9 +87,9 @@ I am still a beginner in the vast world of computer science, humbly learning and
 
 ---
 
-### 🏆 Contributions
-
 <div align="center">
+
+### 🏆 Contributions
 
 <!-- 贪吃蛇动画 -->
 <picture>
