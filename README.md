@@ -7,7 +7,7 @@
 -->
 
 <!-- 动态头像 -->
-<img src="assets/avatar.svg" width="150" />
+<img src="assets/avatar.gif" width="150" />
 
 <br/>
 
