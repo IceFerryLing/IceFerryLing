@@ -1,0 +1,25 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39FF14" />
+      <stop offset="50%" stop-color="#00BFFF" />
+      <stop offset="100%" stop-color="#9400D3" />
+    </linearGradient>
+    <clipPath id="clip">
+      <circle cx="75" cy="75" r="60" />
+    </clipPath>
+  </defs>
+
+  <!-- 旋转的彩色光环 -->
+  <circle cx="75" cy="75" r="70" fill="none" stroke="url(#grad)" stroke-width="3" stroke-linecap="round" stroke-dasharray="100 100">
+    <animateTransform attributeName="transform" type="rotate" from="0 75 75" to="360 75 75" dur="6s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- 反向旋转的虚线内环 -->
+  <circle cx="75" cy="75" r="65" fill="none" stroke="white" stroke-width="1" opacity="0.6" stroke-dasharray="10 10">
+    <animateTransform attributeName="transform" type="rotate" from="360 75 75" to="0 75 75" dur="10s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- 头像图片 -->
+  <image href="https://github.com/IceFerryLing.png" x="15" y="15" width="120" height="120" clip-path="url(#clip)" />
+</svg>

@@ -6,8 +6,8 @@
   <img src="你的背景图链接" width="100%" />
 -->
 
-<!-- 头像 -->
-<img src="https://github.com/IceFerryLing.png" width="120" style="border-radius: 50%;" />
+<!-- 动态头像 -->
+<img src="assets/avatar.svg" width="150" />
 
 <br/>
 
