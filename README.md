@@ -14,7 +14,7 @@
 
 <!-- 终端风格打字机 -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=800&color=39FF14&background=0D111700&center=true&vCenter=true&width=500&lines=%24%20%E6%88%91%E6%98%AF%E6%91%86%E6%B8%A1%EF%BC%8C%E4%B8%80%E4%B8%AAhitszer%20%F0%9F%9A%A3%3B%24%20%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84github%20%E2%9C%A8%3B%24%20%E7%A5%9D%E4%BD%A0%E6%97%85%E9%80%94%E6%84%89%E5%BF%AB%20%F0%9F%9A%80%3B%24%20%E7%BB%99%E4%B8%AA%E6%98%9F%E6%98%9F%E5%90%A7%EF%BC%8C%E8%B0%A2%E8%B0%A2%E5%95%A6~%20%E2%AD%90&duration=1800" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=800&color=39FF14&background=0D111700&center=true&vCenter=true&width=500&lines=%24%20I%20am%20Ferry%2C%20a%20HITSZer%20%F0%9F%9A%A3%3B%24%20Welcome%20to%20my%20GitHub%20%E2%9C%A8%3B%24%20Enjoy%20your%20journey%20%F0%9F%9A%80%3B%24%20Please%20give%20me%20a%20star%20%E2%AD%90&duration=1800" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -25,10 +25,10 @@ I am still a beginner in the vast world of computer science, humbly learning and
 
 <br/>
 
-🔭 正在投入 **后端开发** <br/>
-🌱 正在深入学习 **深度学习 / 网络编程** <br/>
-💻 常用技术栈 **Python / C++** <br/>
-🎵 业余爱好 **古风音乐**
+🔭 I’m currently working on **Backend Development** <br/>
+🌱 I’m currently learning **Deep Learning / Network Programming** <br/>
+💻 Tech Stack **Python / C++** <br/>
+🎵 Hobbies **Traditional Chinese Music**
 
 </div>
 
