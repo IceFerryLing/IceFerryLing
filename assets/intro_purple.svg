@@ -1,0 +1,155 @@
+<svg width="800" height="350" viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b1055">
+        <animate attributeName="stop-color" values="#2b1055;#7597de;#2b1055" dur="15s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#7597de">
+        <animate attributeName="stop-color" values="#7597de;#2b1055;#7597de" dur="15s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <style>
+      .code-font { font-family: 'Consolas', 'Monaco', monospace; font-size: 14px; fill: rgba(255,255,255,0.15); }
+      .math-font { font-family: 'Times New Roman', serif; font-style: italic; font-size: 16px; fill: rgba(255,255,255,0.15); }
+      .chem-font { font-family: 'Arial', sans-serif; font-size: 14px; fill: rgba(255,255,255,0.15); }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#grad)" rx="15" ry="15" />
+  
+  <!-- 漂浮的代码、数学、化学符号 (背景点缀) -->
+  <g>
+    <!-- Code -->
+    <text x="5%" y="20%" class="code-font">print("Hello World")
+      <animate attributeName="y" values="20%;18%;20%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="6s" repeatCount="indefinite" />
+    </text>
+    <text x="80%" y="15%" class="code-font">return 0;
+      <animate attributeName="y" values="15%;17%;15%" dur="7s" repeatCount="indefinite" />
+    </text>
+    <text x="10%" y="90%" class="code-font">while(alive) { learn(); }
+      <animate attributeName="y" values="90%;88%;90%" dur="8s" repeatCount="indefinite" />
+    </text>
+    <text x="75%" y="85%" class="code-font">if (bug) fix();
+      <animate attributeName="y" values="85%;83%;85%" dur="5s" repeatCount="indefinite" />
+    </text>
+    <text x="85%" y="35%" class="code-font">&lt;/&gt;
+      <animate attributeName="y" values="35%;33%;35%" dur="4s" repeatCount="indefinite" />
+    </text>
+
+    <!-- Math -->
+    <text x="15%" y="40%" class="math-font">E = mc²
+      <animate attributeName="y" values="40%;42%;40%" dur="9s" repeatCount="indefinite" />
+    </text>
+    <text x="85%" y="60%" class="math-font">e^{iπ} + 1 = 0
+      <animate attributeName="y" values="60%;58%;60%" dur="7s" repeatCount="indefinite" />
+    </text>
+    <text x="40%" y="10%" class="math-font">∫ f(x) dx
+      <animate attributeName="y" values="10%;12%;10%" dur="8s" repeatCount="indefinite" />
+    </text>
+    <text x="30%" y="85%" class="math-font">F = ma
+      <animate attributeName="y" values="85%;87%;85%" dur="6s" repeatCount="indefinite" />
+    </text>
+    <text x="5%" y="60%" class="math-font">∑
+      <animate attributeName="y" values="60%;58%;60%" dur="5s" repeatCount="indefinite" />
+    </text>
+
+    <!-- Chemistry -->
+    <text x="60%" y="90%" class="chem-font">H₂O
+      <animate attributeName="y" values="90%;88%;90%" dur="7s" repeatCount="indefinite" />
+    </text>
+    <text x="90%" y="80%" class="chem-font">C₆H₁₂O₆
+      <animate attributeName="y" values="80%;82%;80%" dur="10s" repeatCount="indefinite" />
+    </text>
+  </g>
+
+  <!-- 动态粒子效果 -->
+  <g fill="white">
+    <circle cx="10%" cy="80%" r="2" opacity="0.5">
+      <animate attributeName="cy" values="80%;75%;80%" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="20%" cy="20%" r="1.5" opacity="0.7">
+      <animate attributeName="cy" values="20%;25%;20%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="35%" cy="50%" r="2.5" opacity="0.4">
+      <animate attributeName="cy" values="50%;40%;50%" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="50%" cy="10%" r="1" opacity="0.6">
+      <animate attributeName="cy" values="10%;15%;10%" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="65%" cy="85%" r="2" opacity="0.3">
+      <animate attributeName="cy" values="85%;80%;85%" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="80%" cy="30%" r="1.5" opacity="0.5">
+      <animate attributeName="cy" values="30%;35%;30%" dur="9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="90%" cy="60%" r="2.5" opacity="0.6">
+      <animate attributeName="cy" values="60%;50%;60%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="5%" cy="40%" r="1" opacity="0.4">
+      <animate attributeName="cy" values="40%;45%;40%" dur="5.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="15%" cy="10%" r="2" opacity="0.8">
+      <animate attributeName="cy" values="10%;5%;10%" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="45%" cy="90%" r="1.5" opacity="0.5">
+      <animate attributeName="cy" values="90%;85%;90%" dur="6.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="75%" cy="15%" r="2" opacity="0.3">
+      <animate attributeName="cy" values="15%;20%;15%" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="95%" cy="80%" r="1" opacity="0.6">
+      <animate attributeName="cy" values="80%;75%;80%" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="30%" cy="70%" r="2.5" opacity="0.4">
+      <animate attributeName="cy" values="70%;65%;70%" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="60%" cy="40%" r="1.5" opacity="0.7">
+      <animate attributeName="cy" values="40%;45%;40%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <style>
+    .text {
+      font-family: 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: white;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .subtitle {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .item {
+      font-size: 16px;
+    }
+    .emoji {
+      font-size: 18px;
+    }
+  </style>
+
+  <text x="50%" y="60" text-anchor="middle" class="text title">Hi there, I'm 摆渡 👋</text>
+  
+  <text x="50%" y="110" text-anchor="middle" class="text subtitle">Student at Harbin Institute of Technology (Shenzhen) 🎓</text>
+  <text x="50%" y="140" text-anchor="middle" class="text item">Beginner in CS, humbly learning and exploring every day.</text>
+  
+  <line x1="200" y1="170" x2="600" y2="170" stroke="white" stroke-width="1" opacity="0.5" />
+
+  <text x="50%" y="210" text-anchor="middle" class="text item">🔭 Currently working on: <tspan font-weight="bold">Backend Development</tspan></text>
+  <text x="50%" y="240" text-anchor="middle" class="text item">🌱 Currently learning: <tspan font-weight="bold">Deep Learning / Network Programming</tspan></text>
+  <text x="50%" y="270" text-anchor="middle" class="text item">💻 Tech Stack: <tspan font-weight="bold">Python / C++</tspan></text>
+  <text x="50%" y="300" text-anchor="middle" class="text item">🎵 Hobbies: <tspan font-weight="bold">Traditional Chinese Music</tspan></text>
+</svg>

@@ -9,26 +9,17 @@
 <!-- 头像 -->
 <img src="https://github.com/IceFerryLing.png" width="120" style="border-radius: 50%;" />
 
-<!-- 名字 -->
-<h1>Hi there, I'm <a href="https://github.com/IceFerryLing">摆渡</a> 👋</h1>
+<br/>
+
+<!-- 动态背景介绍卡片 -->
+<img src="assets/intro_purple.svg" width="100%" />
+
+<br/>
 
 <!-- 终端风格打字机 -->
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=800&color=39FF14&background=0D111700&center=true&vCenter=true&width=500&lines=%24%20I%20am%20Ferry%2C%20a%20HITSZer%20%F0%9F%9A%A3%3B%24%20Welcome%20to%20my%20GitHub%20%E2%9C%A8%3B%24%20Enjoy%20your%20journey%20%F0%9F%9A%80%3B%24%20Please%20give%20me%20a%20star%20%E2%AD%90&duration=1800" alt="Typing SVG" />
 </a>
-
-<br/>
-
-I'm a student at **Harbin Institute of Technology (Shenzhen)**. 🎓
-<br/>
-I am still a beginner in the vast world of computer science, humbly learning and exploring every day.
-
-<br/>
-
-🔭 I’m currently working on **Backend Development** <br/>
-🌱 I’m currently learning **Deep Learning / Network Programming** <br/>
-💻 Tech Stack **Python / C++** <br/>
-🎵 Hobbies **Traditional Chinese Music**
 
 </div>
 
