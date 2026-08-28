@@ -79,8 +79,8 @@
     theme=radical 是一个很酷的配色，你也可以改成: dark, dracula, gruvbox 等
   -->
 
-  ![Top Langs](https://github-stats-extended.vercel.app/api?username=IceFerryLing&show_icons=true&theme=radical&hide_border=true)
-  ![My Acitivities](https://github-stats-extended.vercel.app/api/top-langs/?username=IceFerryLing&layout=compact&theme=radical&hide_border=true)
+![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=IceFerryLing&layout=donut&theme=tokyonight)
+![My Acitivities](https://github-stats-extended.vercel.app/api?username=IceFerryLing&show=reviews&show_icons=true&theme=tokyonight)
 
 </div>
 
