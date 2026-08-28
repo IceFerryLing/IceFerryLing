@@ -78,8 +78,7 @@
     GitHub 统计卡片 
     theme=radical 是一个很酷的配色，你也可以改成: dark, dracula, gruvbox 等
   -->
-  <img src="https://github-readme-stats-IceFerryLing.vercel.app/api/top-langs/?username=IceFerryLing&layout=donut&theme=radical" height="150" />
-  <img src="https://github-readme-stats-IceFerryLing.vercel.app/api?username=IceFerryLing&show=reviews&show_icons=true&theme=radical" height="150" />
+  [![IceFerryLing's GitHub stats](https://github-stats-extended.vercel.app/api?username=IceFerryLing)](https://github.com/stats-organization/github-stats-extended)
 </div>
 
 ---
