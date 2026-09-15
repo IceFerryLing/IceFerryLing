@@ -1,155 +1,643 @@
-<svg width="800" height="350" viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="cardTitle cardDesc">
+
+  <title id="cardTitle">Hi there, I'm 摆渡</title>
+  <desc id="cardDesc">Personal profile card for 摆渡: CS student at HIT Shenzhen, focused on AI Infra, HPC, and deep learning.</desc>
+
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- ==================== 渐变 ==================== -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#2b1055">
-        <animate attributeName="stop-color" values="#2b1055;#7597de;#2b1055" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#2b1055;#31176a;#2b1055" dur="18s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#4a3a8a">
+        <animate attributeName="stop-color" values="#4a3a8a;#5b5aa6;#4a3a8a" dur="18s" repeatCount="indefinite"/>
       </stop>
       <stop offset="100%" stop-color="#7597de">
-        <animate attributeName="stop-color" values="#7597de;#2b1055;#7597de" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#7597de;#6b8ed6;#7597de" dur="18s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
+
+    <!-- 极光光晕 -->
+    <radialGradient id="aurora" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c7b3ff" stop-opacity="0.13"/>
+      <stop offset="40%" stop-color="#7dd3fc" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#c7b3ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="topGlow" cx="50%" cy="-5%" r="80%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 光斑：紫 / 蓝 / 粉 / 青 -->
+    <radialGradient id="orbPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b794f6" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#b794f6" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#b794f6" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="orbBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.20"/>
+      <stop offset="60%" stop-color="#7dd3fc" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="orbPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f093fb" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#f093fb" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#f093fb" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="orbCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#67e8f9" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#67e8f9" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 点阵网格 -->
+    <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.7" fill="rgba(255,255,255,0.055)"/>
+    </pattern>
+
+    <!-- 横向发光细线 -->
+    <linearGradient id="lineFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a5c9ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="avatarRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f093fb"/>
+      <stop offset="50%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+      <animateTransform attributeName="gradientTransform" type="rotate"
+                        values="0 0.5 0.5;360 0.5 0.5" dur="10s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="dividerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="leftDividerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- ==================== 滤镜 ==================== -->
+    <filter id="textShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+
+    <filter id="glowDot" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="particleGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="orbBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+
+    <!-- 星芒发光 -->
+    <filter id="starGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- ==================== 裁剪 ==================== -->
+    <clipPath id="avatarClip">
+      <circle cx="130" cy="120" r="52"/>
+    </clipPath>
+
+    <clipPath id="cardClip">
+      <rect width="800" height="400" rx="16" ry="16"/>
+    </clipPath>
+
+    <!-- ==================== 样式 ==================== -->
     <style>
-      .code-font { font-family: 'Consolas', 'Monaco', monospace; font-size: 14px; fill: rgba(255,255,255,0.15); }
-      .math-font { font-family: 'Times New Roman', serif; font-style: italic; font-size: 16px; fill: rgba(255,255,255,0.15); }
-      .chem-font { font-family: 'Arial', sans-serif; font-size: 14px; fill: rgba(255,255,255,0.15); }
+      .code-font {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+        font-size: 12px;
+        fill: rgba(255, 255, 255, 0.10);
+      }
+      .math-font {
+        font-family: 'Latin Modern Math', 'STIX Two Math', 'Cambria Math',
+                     'Times New Roman', 'Georgia', serif;
+        font-size: 15px;
+        fill: rgba(255, 255, 255, 0.11);
+        letter-spacing: 0.3px;
+      }
+      .math-ghost {
+        font-family: 'Latin Modern Math', 'STIX Two Math', 'Cambria Math',
+                     'Times New Roman', 'Georgia', serif;
+        font-size: 14px;
+        fill: rgba(255, 255, 255, 0.07);
+        letter-spacing: 0.3px;
+      }
+      .chem-font {
+        font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+        font-size: 12px;
+        fill: rgba(255, 255, 255, 0.10);
+      }
+      .card-text {
+        font-family: 'Inter', 'SF Pro Text', 'PingFang SC',
+                     'Microsoft YaHei', 'Helvetica Neue', 'Noto Sans', sans-serif;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      .section-label {
+        font-size: 10px;
+        font-weight: 700;
+        fill: rgba(255, 255, 255, 0.5);
+        letter-spacing: 2.4px;
+      }
+      .name {
+        font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei',
+                     'SF Pro Text', 'Helvetica Neue', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        fill: #ffffff;
+        letter-spacing: 1px;
+      }
+      .role {
+        font-size: 12.5px;
+        font-weight: 400;
+        fill: rgba(255, 255, 255, 0.62);
+      }
+      .bio {
+        font-size: 12.5px;
+        font-weight: 400;
+        fill: rgba(255, 255, 255, 0.8);
+      }
+      .tag-text {
+        font-size: 11px;
+        font-weight: 600;
+        fill: rgba(255, 255, 255, 0.9);
+        letter-spacing: 0.2px;
+      }
+      .current-text {
+        font-size: 12.5px;
+        font-weight: 500;
+        fill: rgba(255, 255, 255, 0.85);
+      }
+      .mono-text {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+        font-size: 11.5px;
+        font-weight: 500;
+        fill: rgba(255, 255, 255, 0.88);
+        letter-spacing: 0.2px;
+      }
+      .tag-rect {
+        fill: rgba(255, 255, 255, 0.06);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .card-panel {
+        fill: rgba(255, 255, 255, 0.035);
+        stroke: rgba(255, 255, 255, 0.08);
+        stroke-width: 1;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        animate, animateTransform { dur: 0.001s !important; }
+      }
     </style>
   </defs>
-  
-  <!-- 背景 -->
-  <rect width="100%" height="100%" fill="url(#grad)" rx="15" ry="15" />
-  
-  <!-- 漂浮的代码、数学、化学符号 (背景点缀) -->
-  <g>
-    <!-- Code -->
-    <text x="5%" y="20%" class="code-font">print("Hello World")
-      <animate attributeName="y" values="20%;18%;20%" dur="6s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="6s" repeatCount="indefinite" />
-    </text>
-    <text x="80%" y="15%" class="code-font">return 0;
-      <animate attributeName="y" values="15%;17%;15%" dur="7s" repeatCount="indefinite" />
-    </text>
-    <text x="10%" y="90%" class="code-font">while(alive) { learn(); }
-      <animate attributeName="y" values="90%;88%;90%" dur="8s" repeatCount="indefinite" />
-    </text>
-    <text x="75%" y="85%" class="code-font">if (bug) fix();
-      <animate attributeName="y" values="85%;83%;85%" dur="5s" repeatCount="indefinite" />
-    </text>
-    <text x="85%" y="35%" class="code-font">&lt;/&gt;
-      <animate attributeName="y" values="35%;33%;35%" dur="4s" repeatCount="indefinite" />
-    </text>
 
-    <!-- Math -->
-    <text x="15%" y="40%" class="math-font">E = mc²
-      <animate attributeName="y" values="40%;42%;40%" dur="9s" repeatCount="indefinite" />
-    </text>
-    <text x="85%" y="60%" class="math-font">e^{iπ} + 1 = 0
-      <animate attributeName="y" values="60%;58%;60%" dur="7s" repeatCount="indefinite" />
-    </text>
-    <text x="40%" y="10%" class="math-font">∫ f(x) dx
-      <animate attributeName="y" values="10%;12%;10%" dur="8s" repeatCount="indefinite" />
-    </text>
-    <text x="30%" y="85%" class="math-font">F = ma
-      <animate attributeName="y" values="85%;87%;85%" dur="6s" repeatCount="indefinite" />
-    </text>
-    <text x="5%" y="60%" class="math-font">∑
-      <animate attributeName="y" values="60%;58%;60%" dur="5s" repeatCount="indefinite" />
-    </text>
+  <!-- ==================== 卡片主体 ==================== -->
+  <g clip-path="url(#cardClip)">
 
-    <!-- Chemistry -->
-    <text x="60%" y="90%" class="chem-font">H₂O
-      <animate attributeName="y" values="90%;88%;90%" dur="7s" repeatCount="indefinite" />
-    </text>
-    <text x="90%" y="80%" class="chem-font">C₆H₁₂O₆
-      <animate attributeName="y" values="80%;82%;80%" dur="10s" repeatCount="indefinite" />
-    </text>
+    <!-- 第 1 层：基础渐变 -->
+    <rect width="800" height="400" fill="url(#bgGrad)"/>
+    <rect width="800" height="400" fill="url(#topGlow)"/>
+
+    <!-- 第 2 层：极光光晕（顶部宽幅） -->
+    <g filter="url(#orbBlur)" aria-hidden="true">
+      <ellipse cx="400" cy="-40" rx="600" ry="200" fill="url(#aurora)">
+        <animate attributeName="cx" values="400;440;400" dur="30s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="-40;-20;-40" dur="24s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- 第 3 层：点阵网格 -->
+    <rect width="800" height="400" fill="url(#dotGrid)" opacity="0.7" aria-hidden="true"/>
+
+    <!-- 第 4 层：六层光斑 -->
+    <g aria-hidden="true" filter="url(#orbBlur)">
+      <!-- 左上紫 -->
+      <ellipse cx="160" cy="80" rx="170" ry="130" fill="url(#orbPurple)">
+        <animate attributeName="cx" values="160;200;160" dur="22s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="80;110;80" dur="19s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- 右上粉 -->
+      <ellipse cx="700" cy="60" rx="150" ry="120" fill="url(#orbPink)">
+        <animate attributeName="cx" values="700;670;700" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="60;90;60" dur="17s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- 右下蓝 -->
+      <ellipse cx="660" cy="330" rx="200" ry="150" fill="url(#orbBlue)">
+        <animate attributeName="cx" values="660;620;660" dur="26s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="330;300;330" dur="21s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- 左下青 -->
+      <ellipse cx="120" cy="330" rx="160" ry="120" fill="url(#orbCyan)">
+        <animate attributeName="cx" values="120;150;120" dur="23s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="330;300;330" dur="20s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- 中部紫（弱） -->
+      <ellipse cx="400" cy="200" rx="220" ry="160" fill="url(#orbPurple)">
+        <animate attributeName="cx" values="400;420;400" dur="28s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="200;220;200" dur="25s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- 中部粉（弱） -->
+      <ellipse cx="420" cy="120" rx="140" ry="100" fill="url(#orbPink)">
+        <animate attributeName="cx" values="420;400;420" dur="27s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- 第 5 层：横向发光细线 -->
+    <g aria-hidden="true">
+      <line x1="0" y1="60" x2="800" y2="60"
+            stroke="url(#lineFade)" stroke-width="0.6"/>
+      <line x1="0" y1="340" x2="800" y2="340"
+            stroke="url(#lineFade)" stroke-width="0.6" opacity="0.7"/>
+    </g>
+
+    <!-- 第 6 层：边缘公式 -->
+    <g aria-hidden="true">
+      <text x="35" y="22" class="code-font">print("Hello World")
+        <animate attributeName="x" values="35;42;35" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="9s" repeatCount="indefinite"/>
+      </text>
+      <text x="360" y="22" class="math-font">
+        <tspan font-size="1.2em" font-style="normal">∫</tspan>
+        <tspan dx="3" font-style="italic">f</tspan>
+        <tspan>(</tspan>
+        <tspan font-style="italic">x</tspan>
+        <tspan>)</tspan>
+        <tspan dx="5" font-style="italic">dx</tspan>
+        <animate attributeName="x" values="360;368;360" dur="11s" repeatCount="indefinite"/>
+      </text>
+      <text x="650" y="22" class="code-font">return 0;
+        <animate attributeName="x" values="650;642;650" dur="13s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="40" y="55" class="math-font">
+        <tspan font-size="1.7em">∑</tspan>
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 40 55; 8 40 55; 0 40 55; -8 40 55; 0 40 55"
+                          dur="20s" repeatCount="indefinite"/>
+      </text>
+      <text x="42" y="200" class="math-font">
+        <tspan font-style="italic">E</tspan>
+        <tspan dx="4">=</tspan>
+        <tspan dx="4" font-style="italic">m</tspan>
+        <tspan font-style="italic">c</tspan>
+        <tspan baseline-shift="super" font-size="0.62em">2</tspan>
+        <animate attributeName="y" values="200;206;200" dur="10s" repeatCount="indefinite"/>
+      </text>
+      <text x="42" y="340" class="math-font">
+        <tspan font-style="italic">F</tspan>
+        <tspan dx="4">=</tspan>
+        <tspan dx="4" font-style="italic">m</tspan>
+        <tspan font-style="italic">a</tspan>
+        <animate attributeName="y" values="340;346;340" dur="8s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="260" y="388" class="chem-font">H₂O
+        <animate attributeName="x" values="260;266;260" dur="12s" repeatCount="indefinite"/>
+      </text>
+      <text x="420" y="388" class="code-font">while(alive) { learn(); }
+        <animate attributeName="x" values="420;414;420" dur="10s" repeatCount="indefinite"/>
+      </text>
+      <text x="620" y="388" class="math-font">
+        <tspan font-style="italic">e</tspan>
+        <tspan baseline-shift="super" font-size="0.62em" font-style="italic">iπ</tspan>
+        <tspan dx="5">+</tspan>
+        <tspan dx="5">1</tspan>
+        <tspan dx="5">=</tspan>
+        <tspan dx="5">0</tspan>
+        <animate attributeName="x" values="620;628;620" dur="14s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- ==================== 内嵌水印公式 ==================== -->
+    <g aria-hidden="true">
+      <text x="695" y="90" class="math-ghost">
+        <tspan font-style="italic">∇</tspan>
+        <tspan dx="3">·</tspan>
+        <tspan dx="3" font-style="italic">E</tspan>
+        <tspan dx="5">=</tspan>
+        <tspan dx="5" font-style="italic">ρ</tspan>
+        <tspan dx="3">/</tspan>
+        <tspan dx="3" font-style="italic">ε</tspan>
+        <tspan baseline-shift="sub" font-size="0.62em">0</tspan>
+        <animate attributeName="y" values="90;96;90" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0.9;0.5" dur="11s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="745" y="135" class="math-ghost" font-size="18px">
+        <tspan font-style="italic">ℏ</tspan>
+        <animate attributeName="y" values="135;130;135" dur="13s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="600" y="225" class="math-ghost">
+        <tspan font-style="italic">O</tspan>
+        <tspan>(</tspan>
+        <tspan font-style="italic">n</tspan>
+        <tspan dx="3" font-style="italic">log</tspan>
+        <tspan dx="3" font-style="italic">n</tspan>
+        <tspan>)</tspan>
+        <animate attributeName="x" values="600;607;600" dur="15s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="15s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="700" y="250" class="math-ghost" font-size="13px">
+        <tspan font-style="italic">d</tspan>
+        <tspan font-style="italic">x</tspan>
+        <tspan dx="3">/</tspan>
+        <tspan dx="3" font-style="italic">d</tspan>
+        <tspan font-style="italic">t</tspan>
+        <animate attributeName="x" values="700;694;700" dur="12s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="690" y="340" class="math-ghost">
+        <tspan font-style="italic">λ</tspan>
+        <tspan font-style="italic">x</tspan>
+        <tspan dx="3">.</tspan>
+        <tspan dx="3" font-style="italic">x</tspan>
+        <animate attributeName="y" values="340;346;340" dur="10s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="745" y="362" class="math-ghost" font-size="16px">
+        <tspan>∞</tspan>
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="9s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="200" y="40" class="math-ghost" font-size="16px">
+        <tspan>π</tspan>
+        <animate attributeName="y" values="40;35;40" dur="12s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="35" y="105" class="math-ghost" font-size="16px">
+        <tspan font-style="italic">η</tspan>
+        <animate attributeName="y" values="105;110;105" dur="14s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="60" y="380" class="math-ghost" font-size="13px">
+        <tspan font-style="italic">Σ</tspan>
+        <tspan dx="3">=</tspan>
+        <tspan dx="3">1</tspan>
+        <animate attributeName="x" values="60;66;60" dur="13s" repeatCount="indefinite"/>
+      </text>
+
+      <text x="200" y="215" class="math-ghost" font-size="14px">
+        <tspan>Θ</tspan>
+        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="11s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- ==================== 星芒点缀 ==================== -->
+    <g fill="rgba(255,255,255,0.5)" filter="url(#starGlow)" aria-hidden="true">
+
+      <!-- 四角星 1：左上 -->
+      <g>
+        <path d="M 110 78 L 110.9 80.1 L 113 81 L 110.9 81.9 L 110 84 L 109.1 81.9 L 107 81 L 109.1 80.1 Z">
+          <animateTransform attributeName="transform" type="rotate"
+                            values="0 110 81; 360 110 81" dur="40s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="6s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- 四角星 2：右上 -->
+      <g>
+        <path d="M 620 130 L 621 132.5 L 623.5 133.5 L 621 134.5 L 620 137 L 619 134.5 L 616.5 133.5 L 619 132.5 Z">
+          <animateTransform attributeName="transform" type="rotate"
+                            values="0 620 133; -360 620 133" dur="50s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.2;0.7;0.2" dur="8s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- 四角星 3：中部 -->
+      <g>
+        <path d="M 480 260 L 481 262.5 L 483.5 263.5 L 481 264.5 L 480 267 L 479 264.5 L 476.5 263.5 L 479 262.5 Z">
+          <animateTransform attributeName="transform" type="rotate"
+                            values="0 480 263; 360 480 263" dur="45s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.25;0.75;0.25" dur="7s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- 四角星 4：右下 -->
+      <g>
+        <path d="M 730 300 L 730.9 302.1 L 733 303 L 730.9 303.9 L 730 306 L 729.1 303.9 L 727 303 L 729.1 302.1 Z">
+          <animateTransform attributeName="transform" type="rotate"
+                            values="0 730 303; -360 730 303" dur="55s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="9s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- 四角星 5：左下 -->
+      <g>
+        <path d="M 90 250 L 91 252.5 L 93.5 253.5 L 91 254.5 L 90 257 L 89 254.5 L 86.5 253.5 L 89 252.5 Z">
+          <animateTransform attributeName="transform" type="rotate"
+                            values="0 90 253; 360 90 253" dur="48s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.2;0.7;0.2" dur="6.5s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+    </g>
+
+    <!-- ==================== 粒子 ==================== -->
+    <g fill="#ffffff" filter="url(#particleGlow)" aria-hidden="true">
+      <circle cx="10%" cy="80%" r="1.8" opacity="0.5">
+        <animate attributeName="cy" values="80%;75%;80%" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.8;2.4;1.8" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="20%" cy="20%" r="1.4" opacity="0.7">
+        <animate attributeName="cy" values="20%;25%;20%" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.4;2;1.4" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="35%" cy="50%" r="2.2" opacity="0.4">
+        <animate attributeName="cy" values="50%;40%;50%" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="2.2;3;2.2" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50%" cy="10%" r="1" opacity="0.6">
+        <animate attributeName="cy" values="10%;15%;10%" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1;1.6;1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="65%" cy="85%" r="1.8" opacity="0.3">
+        <animate attributeName="cy" values="85%;80%;85%" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.8;2.6;1.8" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="80%" cy="30%" r="1.4" opacity="0.5">
+        <animate attributeName="cy" values="30%;35%;30%" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.4;2;1.4" dur="9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="90%" cy="60%" r="2.2" opacity="0.6">
+        <animate attributeName="cy" values="60%;50%;60%" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="2.2;3;2.2" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0.1;0.6" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="5%" cy="40%" r="1" opacity="0.4">
+        <animate attributeName="cy" values="40%;45%;40%" dur="5.5s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1;1.5;1" dur="5.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="15%" cy="10%" r="1.8" opacity="0.8">
+        <animate attributeName="cy" values="10%;5%;10%" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.8;2.6;1.8" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="45%" cy="90%" r="1.4" opacity="0.5">
+        <animate attributeName="cy" values="90%;85%;90%" dur="6.5s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.4;2;1.4" dur="6.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="75%" cy="15%" r="1.8" opacity="0.3">
+        <animate attributeName="cy" values="15%;20%;15%" dur="7.5s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.8;2.4;1.8" dur="7.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="95%" cy="80%" r="1" opacity="0.6">
+        <animate attributeName="cy" values="80%;75%;80%" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1;1.6;1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="30%" cy="70%" r="2.2" opacity="0.4">
+        <animate attributeName="cy" values="70%;65%;70%" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="2.2;3;2.2" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60%" cy="40%" r="1.4" opacity="0.7">
+        <animate attributeName="cy" values="40%;45%;40%" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.4;2;1.4" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- ==================== 主内容 ==================== -->
+    <g class="card-text" filter="url(#textShadow)">
+
+      <!-- ==================== 左侧：身份区 ==================== -->
+      <g>
+        <circle cx="130" cy="120" r="58" fill="none"
+                stroke="url(#avatarRing)" stroke-width="2.5" opacity="0.9"/>
+
+        <circle cx="130" cy="120" r="52" fill="rgba(255,255,255,0.06)"/>
+
+        <image
+          x="78" y="68"
+          width="104" height="104"
+          href="./aaa.jpg"
+          preserveAspectRatio="xMidYMid slice"
+          clip-path="url(#avatarClip)"
+        />
+
+        <circle cx="172" cy="162" r="7" fill="#4ade80"
+                stroke="#1e1b4b" stroke-width="2" filter="url(#glowDot)">
+          <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+
+        <text x="130" y="218" text-anchor="middle" class="name">摆渡</text>
+
+        <text x="130" y="244" text-anchor="middle" class="role">HIT Shenzhen · CS Student</text>
+
+        <text x="130" y="266" text-anchor="middle" class="role">AI Infra · HPC · Deep Learning</text>
+
+        <line x1="55" y1="292" x2="205" y2="292"
+              stroke="url(#leftDividerGrad)" stroke-width="1"
+              stroke-linecap="round"/>
+
+        <text x="130" y="316" text-anchor="middle" class="role">Shenzhen, China · GMT+8</text>
+        <text x="130" y="338" text-anchor="middle" class="role">Status: learning &amp; building</text>
+        <text x="130" y="360" text-anchor="middle" class="role"
+              fill="rgba(125,211,252,0.75)">Open to research &amp; collabs</text>
+      </g>
+
+      <!-- ==================== 竖直分割线 ==================== -->
+      <line x1="255" y1="35" x2="255" y2="365"
+            stroke="url(#dividerGrad)" stroke-width="1" stroke-linecap="round"/>
+
+      <!-- ==================== About Me ==================== -->
+      <g>
+        <rect x="275" y="30" width="495" height="118" rx="12" class="card-panel"/>
+
+        <rect x="295" y="48" width="3" height="10" rx="1.5" fill="#7dd3fc" opacity="0.8"/>
+        <text x="305" y="56" class="section-label">ABOUT ME</text>
+
+        <text x="295" y="82" class="bio">CS undergrad at HIT Shenzhen. Into AI Infra, HPC, and deep learning.</text>
+        <text x="295" y="108" class="bio">Currently learning CUDA, ML compilers, and distributed training.</text>
+        <text x="295" y="134" class="bio">Fun fact: traditional Chinese music and stargazing.</text>
+      </g>
+
+      <!-- ==================== Tech Stack ==================== -->
+      <g>
+        <rect x="275" y="160" width="495" height="104" rx="12" class="card-panel"/>
+
+        <rect x="295" y="178" width="3" height="10" rx="1.5" fill="#7dd3fc" opacity="0.8"/>
+        <text x="305" y="186" class="section-label">TECH STACK</text>
+
+        <rect x="295" y="200" width="62" height="26" rx="13" class="tag-rect"/>
+        <text x="326" y="217" text-anchor="middle" class="tag-text">Python</text>
+
+        <rect x="365" y="200" width="56" height="26" rx="13" class="tag-rect"/>
+        <text x="393" y="217" text-anchor="middle" class="tag-text">C/C++</text>
+
+        <rect x="429" y="200" width="56" height="26" rx="13" class="tag-rect"/>
+        <text x="457" y="217" text-anchor="middle" class="tag-text">CUDA</text>
+
+        <rect x="493" y="200" width="72" height="26" rx="13" class="tag-rect"/>
+        <text x="529" y="217" text-anchor="middle" class="tag-text">PyTorch</text>
+
+        <rect x="295" y="232" width="56" height="26" rx="13" class="tag-rect"/>
+        <text x="323" y="249" text-anchor="middle" class="tag-text">Linux</text>
+
+        <rect x="359" y="232" width="46" height="26" rx="13" class="tag-rect"/>
+        <text x="382" y="249" text-anchor="middle" class="tag-text">Git</text>
+
+        <rect x="413" y="232" width="62" height="26" rx="13" class="tag-rect"/>
+        <text x="444" y="249" text-anchor="middle" class="tag-text">Docker</text>
+
+        <rect x="483" y="232" width="58" height="26" rx="13" class="tag-rect"/>
+        <text x="512" y="249" text-anchor="middle" class="tag-text">Triton</text>
+      </g>
+
+      <!-- ==================== Focus & Connect ==================== -->
+      <g>
+        <rect x="275" y="276" width="495" height="94" rx="12" class="card-panel"/>
+
+        <rect x="295" y="296" width="3" height="10" rx="1.5" fill="#7dd3fc" opacity="0.8"/>
+        <text x="305" y="304" class="section-label">CURRENT FOCUS</text>
+        <text x="295" y="334" class="current-text">AI Infra · Deep Learning · HPC</text>
+        <text x="295" y="354" class="current-text">Distributed Training · ML Compilers</text>
+
+        <rect x="530" y="296" width="3" height="10" rx="1.5" fill="#7dd3fc" opacity="0.8"/>
+        <text x="540" y="304" class="section-label">CONNECT</text>
+        <text x="530" y="334" class="mono-text">QQ: 523918392</text>
+        <text x="530" y="354" class="mono-text">Email: iceferryling@gmail.com</text>
+      </g>
+
+    </g>
   </g>
 
-  <!-- 动态粒子效果 -->
-  <g fill="white">
-    <circle cx="10%" cy="80%" r="2" opacity="0.5">
-      <animate attributeName="cy" values="80%;75%;80%" dur="4s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="20%" cy="20%" r="1.5" opacity="0.7">
-      <animate attributeName="cy" values="20%;25%;20%" dur="6s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="35%" cy="50%" r="2.5" opacity="0.4">
-      <animate attributeName="cy" values="50%;40%;50%" dur="8s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="50%" cy="10%" r="1" opacity="0.6">
-      <animate attributeName="cy" values="10%;15%;10%" dur="5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="65%" cy="85%" r="2" opacity="0.3">
-      <animate attributeName="cy" values="85%;80%;85%" dur="7s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="6s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="80%" cy="30%" r="1.5" opacity="0.5">
-      <animate attributeName="cy" values="30%;35%;30%" dur="9s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="90%" cy="60%" r="2.5" opacity="0.6">
-      <animate attributeName="cy" values="60%;50%;60%" dur="6s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="5%" cy="40%" r="1" opacity="0.4">
-      <animate attributeName="cy" values="40%;45%;40%" dur="5.5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="15%" cy="10%" r="2" opacity="0.8">
-      <animate attributeName="cy" values="10%;5%;10%" dur="8s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="7s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="45%" cy="90%" r="1.5" opacity="0.5">
-      <animate attributeName="cy" values="90%;85%;90%" dur="6.5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="75%" cy="15%" r="2" opacity="0.3">
-      <animate attributeName="cy" values="15%;20%;15%" dur="7.5s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="95%" cy="80%" r="1" opacity="0.6">
-      <animate attributeName="cy" values="80%;75%;80%" dur="5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="30%" cy="70%" r="2.5" opacity="0.4">
-      <animate attributeName="cy" values="70%;65%;70%" dur="9s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="60%" cy="40%" r="1.5" opacity="0.7">
-      <animate attributeName="cy" values="40%;45%;40%" dur="6s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="8s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <style>
-    .text {
-      font-family: 'Segoe UI', Ubuntu, Sans-Serif;
-      fill: white;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    }
-    .title {
-      font-size: 32px;
-      font-weight: bold;
-    }
-    .subtitle {
-      font-size: 20px;
-      font-weight: 500;
-    }
-    .item {
-      font-size: 16px;
-    }
-    .emoji {
-      font-size: 18px;
-    }
-  </style>
-
-  <text x="50%" y="60" text-anchor="middle" class="text title">Hi there, I'm 摆渡 👋</text>
-  
-  <text x="50%" y="110" text-anchor="middle" class="text subtitle">Student at Harbin Institute of Technology (Shenzhen) 🎓</text>
-  <text x="50%" y="140" text-anchor="middle" class="text item">Beginner in CS, humbly learning and exploring every day.</text>
-  
-  <line x1="200" y1="170" x2="600" y2="170" stroke="white" stroke-width="1" opacity="0.5" />
-
-  <text x="50%" y="210" text-anchor="middle" class="text item">🔭 Currently working on: <tspan font-weight="bold">AI Infra</tspan></text>
-  <text x="50%" y="240" text-anchor="middle" class="text item">🌱 Currently learning: <tspan font-weight="bold">Deep Learning / High Performance Computing</tspan></text>
-  <text x="50%" y="270" text-anchor="middle" class="text item">💻 Tech Stack: <tspan font-weight="bold">Python / C++(CUDA)</tspan></text>
-  <text x="50%" y="300" text-anchor="middle" class="text item">🎵 Hobbies: <tspan font-weight="bold">Traditional Chinese Music</tspan></text>
+  <!-- 卡片外描边 -->
+  <rect x="0.5" y="0.5" width="799" height="399" rx="16" ry="16"
+        fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
 </svg>
