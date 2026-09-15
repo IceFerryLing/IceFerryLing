@@ -6,9 +6,9 @@
   <img src="你的背景图链接" width="100%" />
 -->
 
-<!-- 动态头像 -->
+<!-- 动态头像 
 <img src="assets/avatar.gif" width="150" />
-
+-->
 <br/>
 
 <!-- 动态背景介绍卡片 -->
@@ -78,10 +78,8 @@
     GitHub 统计卡片 
     theme=radical 是一个很酷的配色，你也可以改成: dark, dracula, gruvbox 等
   -->
-
-![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=IceFerryLing&layout=donut)
-![My Acitivities](https://github-stats-extended.vercel.app/api?username=IceFerryLing&show=reviews&show_icons=true)
-
+  <img src="https://github-readme-stats.vercel.app/api?username=IceFerryLing&show_icons=true&theme=radical&hide_border=true" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=IceFerryLing&layout=compact&theme=radical&hide_border=true" height="150" />
 </div>
 
 ---
