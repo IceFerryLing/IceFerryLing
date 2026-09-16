@@ -27,7 +27,6 @@
 
 <div align="center">
 
-### 🛠️ Tech Stack
 
 
   <!-- 编程语言 -->
@@ -70,23 +69,21 @@
 
 ---
 
-<div align="center">
-
-### 📊 GitHub Stats
-
-  <!-- 
-    GitHub 统计卡片 
-    theme=radical 是一个很酷的配色，你也可以改成: dark, dracula, gruvbox 等
-  -->
-![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=IceFerryLing&layout=donut)
-![My Acitivities](https://github-stats-extended.vercel.app/api?username=IceFerryLing&show=reviews&show_icons=true)
-</div>
+<table align="center">
+  <tr>
+    <td>
+      <img height="180" src="https://github-stats-extended.vercel.app/api?username=IceFerryLing&show_icons=true&theme=blue&hide_border=true&include_all_commits=true" />
+    </td>
+    <td>
+      <img height="180" src="https://github-stats-extended.vercel.app/api/top-langs/?username=IceFerryLing&layout=compact&theme=blue&hide_border=true&langs_count=8" />
+    </td>
+  </tr>
+</table>
 
 ---
 
 <div align="center">
 
-### 🏆 Contributions
 
 <!-- 贪吃蛇动画 -->
 <picture>
